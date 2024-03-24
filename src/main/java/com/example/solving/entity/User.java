@@ -21,4 +21,7 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL)
     private List<Task> createdTasks;
 
+    @OneToMany
+    private List<Task> answeredTasks;
+
 }

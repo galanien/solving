@@ -1,19 +1,23 @@
 package com.example.solving.service.impl;
 
 import com.example.solving.dto.UserRequest;
+import com.example.solving.dto.UserResponse;
 import com.example.solving.entity.User;
 import com.example.solving.exception.BadCredentialsException;
+import com.example.solving.mapper.UserMapper;
 import com.example.solving.repository.UserRepository;
 import com.example.solving.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
+    private final UserMapper userMapper;
     @Override
     public void createUser(UserRequest request) {
         Optional<User> user = userRepository.findByEmailAndNicknameOrNicknameOrEmail(request.getEmail(), request.getNickname(),
@@ -24,5 +28,10 @@ public class UserServiceImpl implements UserService {
         user1.setEmail(request.getEmail());
         user1.setNickname(request.getNickname());
         userRepository.save(user1);
+    }
+
+    @Override
+    public List<UserResponse> all() {
+        return userMapper.toDtoS(userRepository.findAll());
     }
 }
