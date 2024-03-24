@@ -10,4 +10,5 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByEmailAndNicknameOrNicknameOrEmail(String email, String nickname, String nickname2, String email2);
+    Optional<User> findByNickname(String nickname);
 }
