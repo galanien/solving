@@ -7,4 +7,4 @@ In this application user can post his problem, and other users can see and comme
 <img width="1465" alt="Screen Shot 2024-03-24 at 18 26 15" src="https://github.com/galanien/solving/assets/145608184/e4151c59-45ae-4eca-94bb-5d95ba800e27">
 
 and we can see how the tasks is showing after solves from another user
-<img width="1457" alt="Screen Shot 2024-03-24 at 18 27 15" src="https://github.com/galanien/solving/assets/145608184/50478069-e8be-4a10-bb2c-f696950e333f">
+<img width="1457" alt="Screen Shot 2024-03-24 at 18 31 15" src="https://github.com/galanien/solving/assets/145608184/481bbeb7-dc37-49c8-8205-734233088b1e">
