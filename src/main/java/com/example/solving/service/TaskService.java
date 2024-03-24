@@ -15,4 +15,6 @@ public interface TaskService {
     void commentToTheTask(Long taskId, CommentRequest request);
 
     List<CommentResponse> getAllTaskCommemnts(Long taskId);
+
+    void setAnswer(Long commentId);
 }

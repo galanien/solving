@@ -27,4 +27,8 @@ public class CommentController {
     public List<CommentResponse> allComments(@PathVariable Long taskId){
         return taskService.getAllTaskCommemnts(taskId);
     }
+    @PostMapping("/answer/{commentId}")
+    public void setItsAnswer(@PathVariable Long commentId){
+        taskService.setAnswer(commentId);
+    }
 }

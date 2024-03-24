@@ -15,6 +15,6 @@ public class AnswerMapperImpl implements AnswerMapper {
         answerResponse.setTitle(answer.getTitle());
         answerResponse.setUserNickname(answer.getUser()!=null? answer.getUser().getNickname(): null);
 
-        return null;
+        return answerResponse;
     }
 }
