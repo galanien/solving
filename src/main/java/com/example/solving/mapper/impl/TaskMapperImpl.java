@@ -28,6 +28,7 @@ public class TaskMapperImpl implements TaskMapper {
         TaskResponse taskResponse = new TaskResponse();
         taskResponse.setId(task.getId());
         taskResponse.setName(task.getName());
+        taskResponse.setCreatedTime(task.getCreatedTime());
         taskResponse.setDescription(task.getDescription());
         taskResponse.setFileUrl(task.getFileUrl());
         taskResponse.setAuthorNickname(task.getCreatedBy()!=null? task.getCreatedBy().getNickname(): null);
